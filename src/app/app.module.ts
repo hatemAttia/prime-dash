@@ -10,7 +10,7 @@ import {TableModule} from 'primeng/table';
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputNumberModule } from 'primeng/inputnumber';
 import {SliderModule} from 'primeng/slider';
 import {DialogModule} from 'primeng/dialog';
@@ -27,11 +27,14 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import { ProductService } from './shared/services/product.service';
 import { ConfirmationService, MessageService } from 'primeng/api';
+import { PredctionComponent } from './modules/predction/predction.component';
+import { StepsModule } from 'primeng/steps';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StatComponent
+    StatComponent,
+    PredctionComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,13 @@ import { ConfirmationService, MessageService } from 'primeng/api';
     RadioButtonModule,
     ConfirmDialogModule,
     InputTextareaModule,
+
+    InputTextModule,
+    RadioButtonModule,
+    FormsModule,
+    DropdownModule,
+    StepsModule,
+    ReactiveFormsModule
    
   ],
   providers: [ProductService, MessageService, ConfirmationService],

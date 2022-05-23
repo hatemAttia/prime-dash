@@ -1,0 +1,353 @@
+<p-toast></p-toast>
+
+<p-steps
+  [model]="items"
+  [(activeIndex)]="activeIndex"
+  [readonly]="false"
+></p-steps>
+<div style="padding: 100px 100px">
+  <div class="card" *ngIf="activeIndex == 0" [formGroup]="predictionForm">
+    <div class="card">
+      <div class="p-grid p-fluid">
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="name"
+              placeholder="name"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="higher_risk"
+              placeholder="higher_risk"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="vehicle_type"
+              placeholder="vehicle_type"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="registration_type"
+              placeholder="registration_type"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="vehicle_make"
+              placeholder="registration_type"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="vehicle_model"
+              placeholder="vehicle_model"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="vehicle_fuel_type"
+              placeholder="vehicle_fuel_type"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="vehicle_fiscal_power"
+              placeholder="vehicle_fiscal_power"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <p-dropdown
+              [options]="cities"
+              formControlName="vehicle_body_type"
+              placeholder="Select a City"
+              [style]="{'width':'100%'}"
+              [filter]="true"
+              filterBy="name"
+              optionLabel="name"
+              [showClear]="true"
+            >
+            </p-dropdown>
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="registration_card_holder_type"
+              placeholder="registration_card_holder_type"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" *ngIf="activeIndex == 1" [formGroup]="predictionForm">
+    <div class="card">
+      <div class="p-grid p-fluid">
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="vehicule_usage_type"
+              placeholder="vehicule_usage_type"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="kilometers_driver_per_year"
+              placeholder="kilometers_driver_per_year"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="parking_mode"
+              placeholder="parking_mode"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="trailer_caravan_type"
+              placeholder="trailer_caravan_type"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="driver_licence_country"
+              placeholder="driver_licence_country"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="driver_status"
+              placeholder="driver_status"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="driver_professional_category"
+              placeholder="driver_professional_category"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="driver_is_exclusive"
+              placeholder="driver_is_exclusive"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="has_second_driver"
+              placeholder="has_second_driver"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="insured_total_months"
+              placeholder="insured_total_months"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" *ngIf="activeIndex == 2" [formGroup]="predictionForm">
+    <div class="card">
+      <div class="p-grid p-fluid">
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="driving_experiences"
+              placeholder="driving_experiences"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="rebate_surcharge_coefficient"
+              placeholder="rebate_surcharge_coefficient"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="crm50_total_years"
+              placeholder="crm50_total_years"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="canceled_by_company"
+              placeholder="canceled_by_company"
+            />
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="has_damage"
+              placeholder="has_damage"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="damage_count"
+              placeholder="damage_count"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="total_months_without_claims"
+              placeholder="total_months_without_claims"
+            />
+          </div>
+        </div>
+        <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              type="text"
+              pInputText
+              formControlName="assign_answer"
+              placeholder="assign_answer"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
